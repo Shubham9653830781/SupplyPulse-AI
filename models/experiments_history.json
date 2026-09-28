@@ -1,0 +1,322 @@
+[
+  {
+    "timestamp": "2026-06-28T09:48:44.090352",
+    "experiment_id": "EXP-DRY-RUN",
+    "target": "disruption_occurred",
+    "objective": "Validate 19-phase MLOps pipeline architecture.",
+    "hypothesis": "Dummy classifier will establish base disruption occurrence prior.",
+    "feature_set_length": 40,
+    "model_architecture": "DummyClassifier",
+    "hyperparameters": {
+      "strategy": "prior"
+    },
+    "metrics": {
+      "Accuracy": 0.94
+    },
+    "business_interpretation": "Baseline established. High class imbalance observed."
+  },
+  {
+    "timestamp": "2026-06-28T09:55:40.918433",
+    "experiment_id": "EXP-FULL-SHIPPING_COSTS",
+    "target": "shipping_costs",
+    "objective": "Train production model for shipping_costs on 100% training data",
+    "hypothesis": "Rigorous T0 feature extraction prevents leakage while generalized XGBoost outperforms Dummy on holdout.",
+    "feature_set_length": 40,
+    "model_architecture": "XGBoost + Sklearn Pipeline",
+    "hyperparameters": {
+      "n_estimators": 91,
+      "max_depth": 6,
+      "learning_rate": 0.09889901083706654
+    },
+    "metrics": {
+      "R2": 0.9996769264927271,
+      "MAE": 0.05781802905678057
+    },
+    "business_interpretation": "Successfully generalized. Train time: 1.2s."
+  },
+  {
+    "timestamp": "2026-06-28T09:55:48.794386",
+    "experiment_id": "EXP-FULL-HEALTH_SCORE",
+    "target": "health_score",
+    "objective": "Train production model for health_score on 100% training data",
+    "hypothesis": "Rigorous T0 feature extraction prevents leakage while generalized XGBoost outperforms Dummy on holdout.",
+    "feature_set_length": 40,
+    "model_architecture": "XGBoost + Sklearn Pipeline",
+    "hyperparameters": {
+      "n_estimators": 89,
+      "max_depth": 6,
+      "learning_rate": 0.054447311301970884
+    },
+    "metrics": {
+      "R2": 0.2534007979320946,
+      "MAE": 23.71086876782773
+    },
+    "business_interpretation": "Successfully generalized. Train time: 1.3s."
+  },
+  {
+    "timestamp": "2026-06-28T09:56:07.335875",
+    "experiment_id": "EXP-FULL-RISK_CLASSIFICATION",
+    "target": "risk_classification",
+    "objective": "Train production model for risk_classification on 100% training data",
+    "hypothesis": "Rigorous T0 feature extraction prevents leakage while generalized XGBoost outperforms Dummy on holdout.",
+    "feature_set_length": 40,
+    "model_architecture": "XGBoost + Sklearn Pipeline",
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 5,
+      "learning_rate": 0.05262698188612808
+    },
+    "metrics": {
+      "Accuracy": 0.605445380013295,
+      "F1_Weighted": 0.5482114059380733
+    },
+    "business_interpretation": "Successfully generalized. Train time: 8.8s."
+  },
+  {
+    "timestamp": "2026-06-28T09:56:13.741349",
+    "experiment_id": "EXP-FULL-IS_DELAYED",
+    "target": "is_delayed",
+    "objective": "Train production model for is_delayed on 100% training data",
+    "hypothesis": "Rigorous T0 feature extraction prevents leakage while generalized XGBoost outperforms Dummy on holdout.",
+    "feature_set_length": 40,
+    "model_architecture": "XGBoost + Sklearn Pipeline",
+    "hyperparameters": {
+      "n_estimators": 95,
+      "max_depth": 5,
+      "learning_rate": 0.0766370378973874
+    },
+    "metrics": {
+      "Accuracy": 0.6988699313095502,
+      "F1_Weighted": 0.6938179488934169
+    },
+    "business_interpretation": "Successfully generalized. Train time: 1.9s."
+  },
+  {
+    "timestamp": "2026-06-28T09:56:20.705976",
+    "experiment_id": "EXP-FULL-ETA_VARIATION_HOURS",
+    "target": "eta_variation_hours",
+    "objective": "Train production model for eta_variation_hours on 100% training data",
+    "hypothesis": "Rigorous T0 feature extraction prevents leakage while generalized XGBoost outperforms Dummy on holdout.",
+    "feature_set_length": 40,
+    "model_architecture": "XGBoost + Sklearn Pipeline",
+    "hyperparameters": {
+      "n_estimators": 81,
+      "max_depth": 4,
+      "learning_rate": 0.08782408973885596
+    },
+    "metrics": {
+      "R2": 0.2844160839995712,
+      "MAE": 23.728861574402334
+    },
+    "business_interpretation": "Successfully generalized. Train time: 2.3s."
+  },
+  {
+    "timestamp": "2026-06-28T09:56:26.507176",
+    "experiment_id": "EXP-FULL-SUPPLIER_RELIABILITY_SCORE",
+    "target": "supplier_reliability_score",
+    "objective": "Train production model for supplier_reliability_score on 100% training data",
+    "hypothesis": "Rigorous T0 feature extraction prevents leakage while generalized XGBoost outperforms Dummy on holdout.",
+    "feature_set_length": 40,
+    "model_architecture": "XGBoost + Sklearn Pipeline",
+    "hyperparameters": {
+      "n_estimators": 82,
+      "max_depth": 5,
+      "learning_rate": 0.0575474193167372
+    },
+    "metrics": {
+      "R2": 0.2178150315540035,
+      "MAE": 19.130961580918893
+    },
+    "business_interpretation": "Successfully generalized. Train time: 1.2s."
+  },
+  {
+    "timestamp": "2026-06-28T09:56:34.350595",
+    "experiment_id": "EXP-FULL-FUEL_CONSUMPTION_RATE",
+    "target": "fuel_consumption_rate",
+    "objective": "Train production model for fuel_consumption_rate on 100% training data",
+    "hypothesis": "Rigorous T0 feature extraction prevents leakage while generalized XGBoost outperforms Dummy on holdout.",
+    "feature_set_length": 40,
+    "model_architecture": "XGBoost + Sklearn Pipeline",
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 6,
+      "learning_rate": 0.0581293478938962
+    },
+    "metrics": {
+      "R2": 0.35319043077209444,
+      "MAE": 2.467471415972752
+    },
+    "business_interpretation": "Successfully generalized. Train time: 3.9s."
+  },
+  {
+    "timestamp": "2026-06-28T09:56:41.192008",
+    "experiment_id": "EXP-FULL-DISRUPTION_OCCURRED",
+    "target": "disruption_occurred",
+    "objective": "Train production model for disruption_occurred on 100% training data",
+    "hypothesis": "Rigorous T0 feature extraction prevents leakage while generalized XGBoost outperforms Dummy on holdout.",
+    "feature_set_length": 40,
+    "model_architecture": "XGBoost + Sklearn Pipeline",
+    "hyperparameters": {
+      "n_estimators": 88,
+      "max_depth": 4,
+      "learning_rate": 0.0961736385833302
+    },
+    "metrics": {
+      "Accuracy": 0.9577609129182362,
+      "F1_Weighted": 0.9370970277945105
+    },
+    "business_interpretation": "Successfully generalized. Train time: 1.7s."
+  },
+  {
+    "timestamp": "2026-06-28T10:13:18.628394",
+    "experiment_id": "EXP-FULL-SHIPPING_COSTS",
+    "target": "shipping_costs",
+    "objective": "Train production model for shipping_costs on 100% training data",
+    "hypothesis": "Rigorous T0 feature extraction prevents leakage while generalized XGBoost outperforms Dummy on holdout.",
+    "feature_set_length": 40,
+    "model_architecture": "XGBoost + Sklearn Pipeline",
+    "hyperparameters": {
+      "n_estimators": 94,
+      "max_depth": 6,
+      "learning_rate": 0.07678687736024513
+    },
+    "metrics": {
+      "R2": 0.9991076442381055,
+      "MAE": 0.059875385084615707
+    },
+    "business_interpretation": "Successfully generalized. Train time: 0.7s."
+  },
+  {
+    "timestamp": "2026-06-28T10:13:21.606103",
+    "experiment_id": "EXP-FULL-HEALTH_SCORE",
+    "target": "health_score",
+    "objective": "Train production model for health_score on 100% training data",
+    "hypothesis": "Rigorous T0 feature extraction prevents leakage while generalized XGBoost outperforms Dummy on holdout.",
+    "feature_set_length": 40,
+    "model_architecture": "XGBoost + Sklearn Pipeline",
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 5,
+      "learning_rate": 0.0918042188167331
+    },
+    "metrics": {
+      "R2": 0.2132514456768887,
+      "MAE": 24.433112663701465
+    },
+    "business_interpretation": "Successfully generalized. Train time: 0.7s."
+  },
+  {
+    "timestamp": "2026-06-28T10:13:33.916316",
+    "experiment_id": "EXP-FULL-RISK_CLASSIFICATION",
+    "target": "risk_classification",
+    "objective": "Train production model for risk_classification on 100% training data",
+    "hypothesis": "Rigorous T0 feature extraction prevents leakage while generalized XGBoost outperforms Dummy on holdout.",
+    "feature_set_length": 40,
+    "model_architecture": "XGBoost + Sklearn Pipeline",
+    "hyperparameters": {
+      "n_estimators": 80,
+      "max_depth": 5,
+      "learning_rate": 0.07995394931173447
+    },
+    "metrics": {
+      "Accuracy": 0.5977306309069113,
+      "F1_Weighted": 0.5418254955455419
+    },
+    "business_interpretation": "Successfully generalized. Train time: 2.0s."
+  },
+  {
+    "timestamp": "2026-06-28T10:13:40.133498",
+    "experiment_id": "EXP-FULL-IS_DELAYED",
+    "target": "is_delayed",
+    "objective": "Train production model for is_delayed on 100% training data",
+    "hypothesis": "Rigorous T0 feature extraction prevents leakage while generalized XGBoost outperforms Dummy on holdout.",
+    "feature_set_length": 40,
+    "model_architecture": "XGBoost + Sklearn Pipeline",
+    "hyperparameters": {
+      "n_estimators": 93,
+      "max_depth": 4,
+      "learning_rate": 0.09116205348180705
+    },
+    "metrics": {
+      "Accuracy": 0.6882544815857704,
+      "F1_Weighted": 0.6848078772827892
+    },
+    "business_interpretation": "Successfully generalized. Train time: 1.4s."
+  },
+  {
+    "timestamp": "2026-06-28T10:13:43.349272",
+    "experiment_id": "EXP-FULL-ETA_VARIATION_HOURS",
+    "target": "eta_variation_hours",
+    "objective": "Train production model for eta_variation_hours on 100% training data",
+    "hypothesis": "Rigorous T0 feature extraction prevents leakage while generalized XGBoost outperforms Dummy on holdout.",
+    "feature_set_length": 40,
+    "model_architecture": "XGBoost + Sklearn Pipeline",
+    "hyperparameters": {
+      "n_estimators": 87,
+      "max_depth": 4,
+      "learning_rate": 0.06635555477298712
+    },
+    "metrics": {
+      "R2": 0.2699545597294255,
+      "MAE": 24.035617520216938
+    },
+    "business_interpretation": "Successfully generalized. Train time: 0.6s."
+  },
+  {
+    "timestamp": "2026-06-28T10:13:48.624418",
+    "experiment_id": "EXP-FULL-SUPPLIER_RELIABILITY_SCORE",
+    "target": "supplier_reliability_score",
+    "objective": "Train production model for supplier_reliability_score on 100% training data",
+    "hypothesis": "Rigorous T0 feature extraction prevents leakage while generalized XGBoost outperforms Dummy on holdout.",
+    "feature_set_length": 40,
+    "model_architecture": "XGBoost + Sklearn Pipeline",
+    "hyperparameters": {
+      "n_estimators": 98,
+      "max_depth": 6,
+      "learning_rate": 0.07293254932184959
+    },
+    "metrics": {
+      "R2": 0.18044357722706483,
+      "MAE": 19.588288484716035
+    },
+    "business_interpretation": "Successfully generalized. Train time: 1.5s."
+  },
+  {
+    "timestamp": "2026-06-28T10:13:52.584922",
+    "experiment_id": "EXP-FULL-FUEL_CONSUMPTION_RATE",
+    "target": "fuel_consumption_rate",
+    "objective": "Train production model for fuel_consumption_rate on 100% training data",
+    "hypothesis": "Rigorous T0 feature extraction prevents leakage while generalized XGBoost outperforms Dummy on holdout.",
+    "feature_set_length": 40,
+    "model_architecture": "XGBoost + Sklearn Pipeline",
+    "hyperparameters": {
+      "n_estimators": 85,
+      "max_depth": 4,
+      "learning_rate": 0.0856118037534089
+    },
+    "metrics": {
+      "R2": 0.34929080249567945,
+      "MAE": 2.4926757680537905
+    },
+    "business_interpretation": "Successfully generalized. Train time: 1.0s."
+  },
+  {
+    "timestamp": "2026-06-28T10:13:59.064828",
+    "experiment_id": "EXP-FULL-DISRUPTION_OCCURRED",
+    "target": "disruption_occurred",
+    "objective": "Train production model for disruption_occurred on 100% training data",
+    "hypothesis": "Rigorous T0 feature extraction prevents leakage while generalized XGBoost outperforms Dummy on holdout.",
+    "feature_set_length": 40,
+    "model_architecture": "XGBoost + Sklearn Pipeline",
+    "hyperparameters": {
+      "n_estimators": 100,
+      "max_depth": 6,
+      "learning_rate": 0.07220612643377972
+    },
+    "metrics": {
+      "Accuracy": 0.9534138113691488,
+      "F1_Weighted": 0.931993160424221
+    },
+    "business_interpretation": "Successfully generalized. Train time: 0.9s."
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "temporal_stages": {
+    "T0": {
+      "description": "Information available at the exact moment of order placement. Valid inputs for predictive models.",
+      "allowed_features": [
+        "payment_type",
+        "Days for shipment (scheduled)",
+        "Benefit per order",
+        "Sales per customer",
+        "Category Id",
+        "Category Name",
+        "destination_city",
+        "destination_country",
+        "Customer Segment",
+        "Customer State",
+        "Customer Street",
+        "Customer Zipcode",
+        "Department Id",
+        "Department Name",
+        "Latitude",
+        "Longitude",
+        "Market",
+        "origin_city",
+        "origin_country",
+        "order date (DateOrders)",
+        "Order Item Discount",
+        "Order Item Discount Rate",
+        "Order Item Product Price",
+        "Order Item Quantity",
+        "Sales",
+        "Order Item Total",
+        "Order Region",
+        "Order State",
+        "Product Category Id",
+        "product_name",
+        "Product Price",
+        "Shipping Mode",
+        "haversine_distance_km",
+        "order_month",
+        "order_day_of_week",
+        "is_weekend",
+        "order_month_sin",
+        "order_month_cos",
+        "order_day_sin",
+        "order_day_cos"
+      ]
+    },
+    "T1": {
+      "description": "Warehouse processing phase. Strictly prohibited from prediction inputs.",
+      "leakage_features": [
+        "Order Status",
+        "shipping date (DateOrders)"
+      ]
+    },
+    "T2": {
+      "description": "Transit phase. Strictly prohibited from prediction inputs.",
+      "leakage_features": [
+        "Days for shipping (real)",
+        "Delivery Status"
+      ]
+    },
+    "T3": {
+      "description": "Post-delivery phase. Strictly prohibited from prediction inputs. Mostly used to derive targets.",
+      "leakage_features": [
+        "Late_delivery_risk"
+      ]
+    }
+  },
+  "targets": [
+    "health_score", 
+    "risk_classification", 
+    "is_delayed", 
+    "eta_variation_hours", 
+    "supplier_reliability_score", 
+    "shipping_costs", 
+    "fuel_consumption_rate", 
+    "disruption_occurred"
+  ]
+}

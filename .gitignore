@@ -1,0 +1,99 @@
+# ==============================================================================
+# SupplyPulse AI — Git Ignore Configuration
+# Curated for Data Science, Machine Learning & Streamlit Community Cloud
+# ==============================================================================
+
+# Python Bytecode & Optimization Caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environments (NEVER COMMIT)
+.venv/
+venv/
+env/
+ENV/
+backend/venv/
+*/venv/
+env.bak/
+venv.bak/
+
+# Streamlit Specific
+.streamlit/secrets.toml
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Testing & Coverage
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+
+# Logs & Temporary Execution Files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+backend_log.txt
+backend_pid.txt
+
+# Legacy Dual-Stack Architecture (Preserved locally, excluded from DS portfolio)
+frontend/
+backend/
+test_dashboard.py
+
+# Node.js & Next.js Build Artifacts
+node_modules/
+frontend/node_modules/
+*/node_modules/*
+.next/
+frontend/.next/
+/out/
+/build
+.pnp
+.pnp.js
+.vercel
+
+# Environment & Secret Files (NEVER COMMIT SECRETS)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Editor & OS Artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# AI IDE & Agent Cache Files
+.gemini/
+.claude/
+.kiro/
+.qoder/
+.code-review-graph/
+.cursorrules
+.windsurfrules
+mcp.json
+.mcp.json
+
+# Exclude Large Raw / Pre-transformation Datasets (Keep data/processed/test.csv)
+backend/data/*.csv
+backend/train.csv
+backend/unified_supply_chain_dataset.csv
+backend/data/raw/
+backend/data/interim/
